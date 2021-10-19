@@ -1,0 +1,48 @@
+
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
+
+<div class="card my-5">
+  <div class="card-body">
+<form class="row g-3" (ngSubmit)="onSubmit()" #cartaForm="ngForm">
+  <div class="col-md-6">
+    <label for="nome" class="form-label">Nome</label>
+    <input type="text" [(ngModel)]="carta.nome" class="form-control" id="nome" name="nome">
+  </div>
+  <div class="col-md-6">
+    <label for="codice" class="form-label">codice</label>
+    <input type="text" [(ngModel)]="carta.codice" class="form-control" id="codice"  name="codice">
+  </div>
+  <div class="col-md-2">
+    <label for="condizioni" class="form-label">Condizioni</label>
+    <input type="text" [(ngModel)]="carta.condizioni" class="form-control" id="condizioni"   name="codice">
+  </div>
+  <div class="col-md-2">
+    <label for="gradata" class="form-label">Gradata</label>
+    <select id="gradata" [(ngModel)]="carta.gradata" class="form-select" name="gradata">
+      <option selected>Choose...</option>
+      <option value= "si">Si</option>
+      <option value= "no">No</option>
+    </select>
+  </div>
+  <div class="col-md-2">
+    <label for="prezzo" class="form-label">Prezzo</label>
+    <input type="text" [(ngModel)]="carta.prezzo" class="form-control" id="prezzo" name="prezzo">
+  </div>
+  <div class="col-md-2">
+    <label for="giorno" class="form-label">giorno</label>
+    <input type="text" [(ngModel)]="carta.giorno" class="form-control" id="giorno" name="giorno">
+  </div>
+  <div class="col-md-2">
+    <label for="mese" class="form-label">mese</label>
+    <input type="text" [(ngModel)]="carta.mese" class="form-control" id="mese" name="mese">
+  </div>
+  <div class="col-md-2">
+    <label for="anno" class="form-label">Anno</label>
+    <input type="text" [(ngModel)]="carta.anno" class="form-control" id="anno" name="anno">
+  </div>
+  <div class="col-12">
+    <button type="submit" class="btn btn-primary">Invia</button>
+  </div>
+</form>
+</div>
+</div>
